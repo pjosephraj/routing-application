@@ -1,5 +1,5 @@
 {
-  "name": "routing-application",
+  "name": "react-routing-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -43,5 +43,7 @@
   },
   "devDependencies": {
     "@types/react-router-dom": "^5.1.8"
-  }
+  },
+  "keywords": [],
+  "description": ""
 }

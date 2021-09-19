@@ -1,9 +1,3 @@
-import React from 'react';
+const Contact = () => <h1>Hi Geeks this is my Contact us page</h1>;
 
-export default class Contact extends React.Component {
-  render() {
-    return (
-      <h1>Hi Geeks this is my Contact us page</h1>
-    );
-  }
-}
+export default Contact;

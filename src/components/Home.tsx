@@ -1,13 +1,13 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 interface Props {
   setProducts: any;
-};
+}
 
 interface State {
   response: ResponseData[];
-};
+}
 
 interface ResponseData {
   id: number;
@@ -16,21 +16,20 @@ interface ResponseData {
   image: string;
 }
 export default class Home extends React.Component<Props, State> {
-
   constructor(props: Props) {
     super(props);
     this.state = {
       response: []
-    }
+    };
   }
 
   getProductsData = async () => {
-    const apiResponse = await fetch('https://fakestoreapi.com/products');
+    const apiResponse = await fetch("https://fakestoreapi.com/products");
     const response = await apiResponse.json();
     this.setState({ response: response });
     this.props.setProducts(response);
-    console.log('responseData', response);
-  }
+    console.log("responseData", response);
+  };
 
   componentDidMount() {
     this.getProductsData();
@@ -48,10 +47,13 @@ export default class Home extends React.Component<Props, State> {
           {response.map((resp) => {
             return (
               <Link to={`/${resp.id}`} key={resp.id} className="product-item">
-                <img src={resp.image} alt="product"/>
-                <div className="product-desc">{resp.description.slice(0, 100) + '...'}</div>
+                <img src={resp.image} alt="product" />
+                <div className="product-desc">
+                  {resp.description.slice(0, 100) + "..."}
+                </div>
                 <div className="product-price">₹ {resp.price}</div>
-              </Link>);
+              </Link>
+            );
           })}
         </div>
       </>

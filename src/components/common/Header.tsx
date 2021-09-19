@@ -1,14 +1,26 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import '../styles/commonStyles.css';
+import React from "react";
+import { NavLink } from "react-router-dom";
+import "../styles/commonStyles.css";
 
-export default class Header extends React.Component {
+interface Props {}
+
+export default class Header extends React.Component<Props> {
   render() {
     return (
       <div className="top-nav">
-        <Link className="nav-items" to="/">Home</Link>
-        <Link className="nav-items" to="/about-us">About Us</Link>
-        <Link className="nav-items" to="/contact-us">Contact Us</Link>
+        <NavLink className="nav-items" to="/" activeClassName="active" exact>
+          Home
+        </NavLink>
+        <NavLink className="nav-items" to="/about-us" activeClassName="active">
+          About Us
+        </NavLink>
+        <NavLink
+          className="nav-items"
+          to="/contact-us"
+          activeClassName="active"
+        >
+          Contact Us
+        </NavLink>
       </div>
     );
   }
