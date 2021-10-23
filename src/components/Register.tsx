@@ -103,7 +103,7 @@ const Register = () => {
             <div className="form-field-error">Password mismatch!</div>
           </div>
           <div className="form-btns">
-            <button className="btn" onClick={submitForm}>Submit</button>
+            <button className="btn" onClick={submitForm}>Register</button>
           </div>
         </div>
       </div>
