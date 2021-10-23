@@ -14,10 +14,10 @@ function Product(props: any) {
 
   const getProductData = () => {
     const { id } = props.match.params;
-    console.log('id', id);
+    // console.log('id', id);
     let { products } = props;
     products = products.length ? products : [];
-    console.log("products", props, products);
+    // console.log("products", props, products);
     let filteredProduct = products.find((itm: any) => itm.id === +id);
     filteredProduct = filteredProduct || product;
     setProduct((prev: any) => prev.product = filteredProduct)

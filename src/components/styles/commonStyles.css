@@ -99,3 +99,157 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
+
+/* Form */
+.form-wrapper {
+  background: #fff;
+  width: 90vw;
+  max-width: 600px;
+  margin: 3rem auto 1rem;
+}
+
+.form-wrapper .form-title {
+  padding: 1rem 1rem 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: blue;
+}
+
+.form-wrapper .form {
+  padding: 0.5rem 1rem 1rem;
+}
+
+.form-wrapper .form-field {
+  display: grid;
+  grid-gap: 0.3rem;
+  padding-bottom: 0.8rem;
+  position: relative;
+}
+
+.form-wrapper .form-field label {
+  color: #666;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.form-wrapper .form-field input {
+  padding: 0.5rem;
+  border: 1px solid #666;
+  outline: none;
+}
+
+.form-wrapper .form-field input:active {
+  border-color: blue;
+}
+
+.form-wrapper .form-field-error {
+  position: absolute;
+  right: 0;
+  font-size: 0.9rem;
+  color: red;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.form-wrapper .form-field.has-error .form-field-error {
+  opacity: 1;
+}
+
+.form-wrapper .form-field.has-error input {
+  border-color: red;
+}
+
+.form-btns {
+  padding-top: 0.5rem;
+}
+
+.form-btns .btn {
+  padding: 0.8rem 1rem;
+  width: 100%;
+  background: blue;
+  border: none;
+  outline: none;
+  color: #fff;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.form-btns .btn:hover {
+  background: rgb(3, 3, 177);
+}
+
+/* Error Wrapper */
+.err-success-wrapper {
+  position: relative;
+}
+.error-wrapper, .success-wrapper {
+  position: absolute;
+  padding: 0.6rem 1rem;
+  width: 90vw;
+  margin: 0.2rem auto;
+  line-height: 1;
+  border-radius: 4px;
+  transform: translateX(-50%);
+  left: 50%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.error-wrapper {
+  background: #ffd7d7;
+  color: red;
+}
+
+.success-wrapper {
+  background: #d7ffe0;
+  color: green;
+}
+
+.error-wrapper.active,
+.success-wrapper.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.error-wrapper .error-close,
+.success-wrapper .success-close {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.error-wrapper .error-text,
+.success-wrapper .success-text {
+  padding-right: 24px;
+}
+
+.error-wrapper .error-close:before,  .error-wrapper .error-close:after,
+.success-wrapper .success-close:before,  .success-wrapper .success-close:after{
+  width: 24px;
+  height: 3px;
+  position: absolute;
+  content: '';
+  top: 10px;
+}
+
+.error-wrapper .error-close:before,  .error-wrapper .error-close:after {
+  background: red;
+}
+
+.success-wrapper .success-close:before,  .success-wrapper .success-close:after {
+  background: green;
+}
+
+.error-wrapper .error-close:before,
+.success-wrapper .success-close:before {
+  transform: rotate(45deg);
+}
+
+.error-wrapper .error-close:after,
+.success-wrapper .success-close:after {
+  transform: rotate(-45deg);
+}

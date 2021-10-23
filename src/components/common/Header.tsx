@@ -21,6 +21,15 @@ export default class Header extends React.Component<Props> {
         >
           Contact Us
         </NavLink>
+        <NavLink className="nav-items" to="/login" activeClassName="active">
+          Login
+        </NavLink>
+        <NavLink className="nav-items" to="/register" activeClassName="active">
+          Register
+        </NavLink>
+        <NavLink className="nav-items" to="/users" activeClassName="active">
+          Users
+        </NavLink>
       </div>
     );
   }
