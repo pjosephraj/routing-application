@@ -21,7 +21,9 @@ export default function Home(props: any) {
   };
 
   useEffect(() => {
-    getProductsData();
+    if(!response.length) {
+      getProductsData();
+    }
   });
 
   return (
