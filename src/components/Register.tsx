@@ -2,12 +2,12 @@ import { useState } from "react";
 
 const Register = () => {
 
-  const [first_name, setFirstName] = useState('Joseph1');
-  const [last_name, setLastName] = useState('Raj');
-  const [phone_number, setPhoneNumber] = useState('0987654321');
-  const [email, setEmail] = useState('joseph2@raj.com');
-  const [password, setPassword] = useState('123456');
-  const [confirmPassword, setConfirmPassword] = useState('123456');
+  const [first_name, setFirstName] = useState('');
+  const [last_name, setLastName] = useState('');
+  const [phone_number, setPhoneNumber] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
   const [passwordMismatch, setPasswordMisMatch] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
   const [successMessage, setSuccessMessage] = useState('');

@@ -4,7 +4,7 @@
 }
 
 .nav-items {
-  padding-left: 10px;
+  padding-right: 1.2rem;
   color: white;
   font-size: 1.2rem;
   font-weight: bold;
@@ -176,6 +176,65 @@
 
 .form-btns .btn:hover {
   background: rgb(3, 3, 177);
+}
+
+/* Table */
+.table-wrapper {
+  background: #fff;
+  width: 90vw;
+  margin: 3rem auto 1rem;
+}
+
+.table-wrapper .table-title {
+  padding: 1rem 1rem 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: blue;
+}
+
+.table-content {
+  padding: .5rem 1rem 1rem;
+}
+
+.table-content table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+}
+
+.table-content th {
+  background: #ddd;
+  text-align-last: left;
+}
+
+.table-content th, .table-content td {
+  padding: .5rem;
+}
+
+.table-content tr {
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+  transition: background .2s ease-in-out;
+}
+
+.table-content tr:nth-child(even) {
+  background: #f8f8f8;
+}
+
+.table-content tr:hover {
+  background: #eee;
+}
+
+.table-content td {
+  border-right: 1px solid #ddd;
+}
+
+.table-content td :last-child {
+  border: none;
+}
+
+.table-content .no-data{
+  text-align: center;
 }
 
 /* Error Wrapper */
